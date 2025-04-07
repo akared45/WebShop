@@ -1,0 +1,112 @@
+/* Auth Section Styles */
+.auth-section {
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+}
+
+.auth-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.auth-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.auth-form .form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.auth-form .input-group-text {
+    background: #f8f9fa;
+    color: var(--primary-color);
+}
+
+.auth-form .form-control {
+    padding: 12px 15px;
+}
+
+.auth-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 129, 0.25);
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: #999;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.auth-divider::before {
+    margin-right: 10px;
+}
+
+.auth-divider::after {
+    margin-left: 10px;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+}
+
+.social-login .btn {
+    flex: 1;
+    padding: 10px;
+}
+
+.password-strength .progress {
+    height: 5px;
+    margin-bottom: 5px;
+}
+
+.password-strength .progress-bar {
+    background-color: #dc3545; /* Red for weak */
+    transition: all 0.3s ease;
+}
+
+.password-strength .strength-text {
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+    .auth-card {
+        padding: 20px;
+    }
+    
+    .social-login {
+        flex-direction: column;
+    }
+}

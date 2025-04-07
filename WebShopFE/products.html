@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrettyClips - Sản Phẩm</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- jQuery UI CSS -->
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header (Giống trang chủ) -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.jpg" alt="PrettyClips Logo" height="80">
+                    <span class="brand-name">PrettyClips</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="products.html">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html">Đăng ký</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sản phẩm</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="products-page py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar Filters -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="sidebar-filter">
+                        <!-- Categories -->
+                        <div class="filter-widget">
+                            <h4 class="filter-title">Danh mục</h4>
+                            <ul class="filter-list">
+                                <li><a href="#" class="active">Tất cả</a></li>
+                                <li><a href="#">Kẹp hoa</a></li>
+                                <li><a href="#">Kẹp ngọc trai</a></li>
+                                <li><a href="#">Kẹp bướm</a></li>
+                                <li><a href="#">Kẹp minimalist</a></li>
+                                <li><a href="#">Kẹp trẻ em</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Price Filter -->
+                        <div class="filter-widget">
+                            <h4 class="filter-title">Giá</h4>
+                            <div class="price-filter">
+                                <div id="price-slider" class="mb-3"></div>
+                                <div class="price-inputs d-flex justify-content-between">
+                                    <input type="text" id="min-price" class="form-control form-control-sm"
+                                        placeholder="Từ" value="50.000">
+                                    <span class="px-2">-</span>
+                                    <input type="text" id="max-price" class="form-control form-control-sm"
+                                        placeholder="Đến" value="300.000">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Colors -->
+                        <div class="filter-widget">
+                            <h4 class="filter-title">Màu sắc</h4>
+                            <div class="color-filter">
+                                <div class="color-option" data-color="red" style="background-color: #ff6b81;"></div>
+                                <div class="color-option" data-color="pink" style="background-color: #ff9ff3;"></div>
+                                <div class="color-option" data-color="white" style="background-color: #f1f2f6;"></div>
+                                <div class="color-option" data-color="gold" style="background-color: #eccc68;"></div>
+                                <div class="color-option" data-color="black" style="background-color: #2f3542;"></div>
+                                <div class="color-option" data-color="blue" style="background-color: #1e90ff;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Sizes -->
+                        <div class="filter-widget">
+                            <h4 class="filter-title">Kích thước</h4>
+                            <div class="size-filter">
+                                <div class="size-option">Nhỏ</div>
+                                <div class="size-option active">Trung bình</div>
+                                <div class="size-option">Lớn</div>
+                            </div>
+                        </div>
+
+                        <!-- Reset Filters -->
+                        <button class="btn btn-outline-danger w-100 mt-3">
+                            <i class="fas fa-times me-2"></i>Xóa bộ lọc
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Listing -->
+                <div class="col-lg-9">
+                    <!-- Sorting Options -->
+                    <div class="sorting-options mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <p class="mb-0">Hiển thị <span class="fw-bold">1-12</span> trên <span
+                                        class="fw-bold">36</span> sản phẩm</p>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <select class="form-select form-select-sm d-inline-block w-auto">
+                                    <option selected>Sắp xếp theo</option>
+                                    <option value="popular">Phổ biến nhất</option>
+                                    <option value="rating">Đánh giá cao</option>
+                                    <option value="price-low">Giá: Thấp đến cao</option>
+                                    <option value="price-high">Giá: Cao đến thấp</option>
+                                    <option value="newest">Mới nhất</option>
+                                </select>
+                                <div class="btn-group ms-2" role="group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary active"
+                                        data-view="grid">
+                                        <i class="fas fa-th"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-view="list">
+                                        <i class="fas fa-list"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid View -->
+                    <div class="row product-grid-view">
+                        <!-- Product items will be loaded here -->
+                    </div>
+
+                    <!-- Products List View (Hidden by default) -->
+                    <div class="product-list-view d-none">
+                        <!-- List view items will be loaded here -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Trước</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Tiếp</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Giống trang chủ) -->
+    <footer class="footer-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="images/logo.jpg" alt="PrettyClips Logo" height="40">
+                    <p class="mt-3">PrettyClips - Thương hiệu kẹp tóc thời trang với chất lượng cao và giá cả hợp lý.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Thông tin</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Sản phẩm</a></li>
+                        <li><a href="#">Khuyến mãi</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Hỗ trợ</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-heading">Liên hệ</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li><i class="fas fa-phone"></i> 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> info@prettyclips.com</li>
+                        <li><i class="fas fa-clock"></i> 8:00 - 17:00 (Thứ 2 - Thứ 6)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-secondary">
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 PrettyClips. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="images/icons/payment-methods.png" alt="Payment Methods" height="60">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title quick-view-title" id="quickViewModalLabel">Tên sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="" class="img-fluid quick-view-image" alt="Product Image">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="quick-view-price mb-3"></div>
+                            <div class="quick-view-rating mb-3"></div>
+                            <p class="quick-view-description mb-3"></p>
+                            <div class="mb-3">
+                                <strong>Mã sản phẩm:</strong> <span class="product-code"></span>
+                            </div>
+                            <div class="mb-3">
+                                <strong>Danh mục:</strong> <span class="product-category"></span>
+                            </div>
+                            <div class="mb-3">
+                                <strong>Tình trạng:</strong> <span class="product-stock"></span>
+                            </div>
+                            <div class="input-group qty-group mb-3 w-50">
+                                <button class="btn btn-outline-secondary decrease-qty" type="button">-</button>
+                                <input type="number" class="form-control qty-input text-center" value="1" min="1">
+                                <button class="btn btn-outline-secondary increase-qty" type="button">+</button>
+                            </div>
+                            <button class="btn btn-primary add-to-cart-modal w-100">
+                                <i class="fas fa-shopping-cart me-2"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/products.js"></script>
+</body>
+
+</html>
